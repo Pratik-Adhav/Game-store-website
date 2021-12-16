@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <div id="contact">
+      <h1 class="h-primary center">Feedback</h1>
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone no.: </label>
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Enter Phone number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Birthdate: </label>
+            <input type="date" name="birthdate" id="birthdate" />
+          </div>
+          <div class="form-group">
+            <label for="Feedback">Feedback: </label>
+            <input type="text" name="Feedback" id="Feedback" />
+          </div>
+          <button class="submit" onclick="wishlistAlert()">
+            Submit
+          </button>
+          <script>
+            function wishlistAlert() {
+              if (confirm("Do you want to submit the feedback?")) {
+                alert("Your feedback has been submitted successfully");
+                location.href = "/home.html";
+              }
+            }
+          </script>
+        </form>
+      </div>
+    </div>
+    <style>
+      body {
+        /* background-color: rgb(27, 27, 27); */
+        /* background: url(); */
+        background: -webkit-linear-gradient(left, #b224ef, #7579ff);
+
+        color: white;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+      }
+
+      #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+      }
+
+      #contact-box input,
+      #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      #contact-box form {
+        width: 30%;
+      }
+      #contact-box label {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.3rem;
+      }
+      /* Utility Classes */
+      .h-primary {
+        font-size: 3.8rem;
+        padding: 12px;
+        font-family: "Exo 2", sans-serif;
+      }
+
+      .h-secondary {
+        font-size: 2.3rem;
+        padding: 12px;
+        font-family: "Exo 2", sans-serif;
+      }
+
+      button {
+        display: flex;
+        padding: 6px 20px;
+        background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+        border: 1px solid white;
+        /* background-color: var(--theme-color); */
+
+        /* width: 6em; */
+        margin: 14px auto;
+        font-size: 1.5rem;
+        color: white;
+        border-radius: 20px;
+        /* justify-items: center; */
+        justify-items: center;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(87, 169, 250);
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>
